@@ -1,0 +1,32 @@
+{
+  "name": "@apparts/tag-deploy",
+  "version": "1.0.0",
+  "description": "Tag and check a repository as preperation for deploy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phuhl/apparts-deploy.git"
+  },
+  "keywords": [
+    "apparts",
+    "s3",
+    "aws",
+    "deploy"
+  ],
+  "author": "Philipp Uhl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phuhl/apparts-deploy/issues"
+  },
+  "bin": {
+    "tag-deploy": "index.js"
+  },
+  "homepage": "https://github.com/phuhl/apparts-deploy#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "yargs": "^16.2.0"
+  }
+}
