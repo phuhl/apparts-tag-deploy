@@ -1,0 +1,24 @@
+#+TITLE: @apparts/tag-deploy
+#+DATE: [2021-08-13 Fri]
+#+AUTHOR: Philipp Uhl
+
+
+Git-tag a deploy automatically.
+
+* Usage:
+
+#+BEGIN_SRC sh
+npx @apparts/tag-deploy
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+Optionen:
+      --version              Show version                              [boolean]
+      --production           Deploy into an production environment.    [boolean]
+      --environment          Environment name. Defaults to "PROD" for production
+                             and "dev" otherwise.                       [string]
+      --tagPrefix            Specify a prefix for the git-tag.          [string]
+      --noticeFolderChanges  Specify one or multiple folders in which changes
+                             should be explicitly stated to the user.    [array]
+  -h, --help                 Show help                                 [boolean]
+#+END_EXAMPLE

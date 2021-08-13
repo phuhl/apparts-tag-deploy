@@ -101,15 +101,16 @@ const argv = yargs(hideBin(process.argv))
   .command("$0", "", (yargs) => yargs.usage("$0"))
   .option("production", {
     type: "boolean",
-    description: "Deploy into an production environment",
+    description: "Deploy into an production environment.",
   })
   .option("environment", {
     type: "string",
-    description: "Environment name",
+    description:
+      'Environment name. Defaults to "PROD" for production and "dev" otherwise.',
   })
   .option("tagPrefix", {
     type: "string",
-    description: "Tag prefix",
+    description: "Specify a prefix for the git-tag.",
   })
   .option("noticeFolderChanges", {
     type: "array",
