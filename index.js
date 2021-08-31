@@ -40,7 +40,7 @@ const main = async ({
     month = ("0" + (today.getMonth() + 1)).slice(-2),
     hour = today.getHours(),
     minute = today.getMinutes(),
-    tagNamePrefix = `${tagPrefix ? tagPrefix + "-" : ""}${env}-`,
+    tagNamePrefix = `${tagPrefix ? tagPrefix + "-" : ""}${env}`,
     shouldTagName = `${tagNamePrefix}-${day}-${month}-${today.getFullYear()}-${hour}-${minute}`;
 
   await runShellCommand("git tag " + shouldTagName);
