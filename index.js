@@ -48,7 +48,7 @@ const main = async ({
   const gitTagOutput = await runShellCommand(
       'git log --tags --simplify-by-decoration --pretty="format: %d" -1'
     ),
-    mTag = /\(HEAD -> [^,]+, .*?tag: (BE-[a-zA-Z-]*-[0-9-]*)/.exec(
+    mTag = new RegExp("\\(HEAD -> [^,]+, .*?tag: " + shouldTagName).exec(
       gitTagOutput
     );
   if (!mTag || mTag[1] !== shouldTagName) {
