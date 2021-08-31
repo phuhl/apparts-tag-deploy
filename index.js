@@ -54,7 +54,7 @@ const main = async ({
   if (!mTag) {
     throw "Git tag is missing, should have been " + shouldTagName;
   } else {
-    console.log(info, "Git tag:", mTag[1]);
+    console.log(info, "Git tag:", shouldTagName);
   }
 
   // check for noticeFolder changes
@@ -64,8 +64,8 @@ const main = async ({
     )
   )
     .split("\n")
-    .slice(-3)
-    .filter((tag) => new RegExp(tagNamePrefix).test(tag));
+    .filter((tag) => new RegExp(tagNamePrefix).test(tag))
+    .reverse();
   if (gitLastTags[1]) {
     for (const folder of noticeFolderChanges) {
       const gitChanged = await runShellCommand(
