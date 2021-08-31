@@ -1,6 +1,6 @@
 {
   "name": "@apparts/tag-deploy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Tag and check a repository as preperation for deploy",
   "main": "index.js",
   "scripts": {
