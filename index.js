@@ -51,7 +51,7 @@ const main = async ({
     mTag = new RegExp("\\(HEAD -> [^,]+, .*?tag: " + shouldTagName).exec(
       gitTagOutput
     );
-  if (!mTag || mTag[1] !== shouldTagName) {
+  if (!mTag) {
     throw "Git tag is missing, should have been " + shouldTagName;
   } else {
     console.log(info, "Git tag:", mTag[1]);
