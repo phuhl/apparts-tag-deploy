@@ -45,12 +45,8 @@ const main = async ({
 
   await runShellCommand("git tag " + shouldTagName);
 
-  const gitTagOutput = await runShellCommand(
-      'git log --tags --simplify-by-decoration --pretty="format: %d" -1'
-    ),
-    mTag = new RegExp("\\(HEAD -> [^,]+, .*?tag: " + shouldTagName).exec(
-      gitTagOutput
-    );
+  const gitTagOutput = await runShellCommand("git tag --points-at HEAD"),
+    mTag = new RegExp(shouldTagName).exec(gitTagOutput);
   if (!mTag) {
     throw "Git tag is missing, should have been " + shouldTagName;
   } else {
